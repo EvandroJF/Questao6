@@ -1,0 +1,42 @@
+.h3 {
+  text-align: left;
+  color: #697387;
+  font-weight: bold;
+}
+.h6 {
+  text-align: left;
+  color: #475f8c;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.thLeft {
+  background-color: #eaecf0;
+  border-color: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.container {
+  display: flex;
+}
+main {
+  width: 100%;
+  padding: 20px;
+}
+td,
+th {
+  border: 0px solid #999;
+  padding: 20px;
+  color: #858e9e;
+}
+td {
+  color: #000;
+  text-align: center;
+}
+.primary {
+  background-color: brown;
+  position: sticky;
+}
+th {
+  padding: 20px;
+}
