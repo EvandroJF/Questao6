@@ -69,39 +69,34 @@ function Home() {
   const data = [
     {
       title: "Alimentação",
-      defaultValue: "Díario",
-      valor: 45.5,
-      total: 63700,
+      defaultValue: "Mensal",
+      valor: 752.25,
+      total: 248242.5,
+    },
+    {
+      title: "Combustível",
+      defaultValue: "Mensal",
+      valor: 100,
+      total: 6600,
     },
     {
       title: "Cultura",
       defaultValue: "Mensal",
       valor: 100,
-      total: 3500,
+      total: 33000,
+    },
+
+    {
+      title: "Educação",
+      defaultValue: "anual",
+      valor: 1000,
+      total: 330000,
     },
     {
       title: "Flexivel",
-      defaultValue: "Quinzenal",
-      valor: 100,
-      total: 4200,
-    },
-    {
-      title: "Home Office",
       defaultValue: "Mensal",
-      valor: 1200,
-      total: 42000,
-    },
-    {
-      title: "Mobilidade",
-      defaultValue: "Mensal",
-      valor: 12,
-      total: 8400,
-    },
-    {
-      title: "Saúde",
-      defaultValue: "Mensal",
-      valor: 420,
-      total: 41160,
+      valor: 120,
+      total: 0,
     },
   ];
 
@@ -346,11 +341,19 @@ function Home() {
 
           {/* INICIO RESUMO */}
           <Col xs={5} md={5}>
+            {/* colar alert */}
+
             <Card className="cardStyleCol">
               <Card.Body>
                 <h3 className="h3">Resumo</h3>
                 <h6 className="h6">Gestores de área</h6>
-
+                {seeAlert ? (
+                  <>
+                    <div class="alert alert-danger" role="alert">
+                      <a>Erro ao excluir essa categoria</a>
+                    </div>
+                  </>
+                ) : null}
                 <ListGroup as="ol">
                   <>
                     {dataResumo.map((item, index) => (
@@ -452,12 +455,6 @@ function Home() {
           {/* FINAL RESUMO */}
         </Row>
       </Container>
-      {/* colar alert */}
-      {seeAlert ? (
-        <>
-          <a>Erro ao excluir essa categoria</a>
-        </>
-      ) : null}
     </div>
   );
 }
