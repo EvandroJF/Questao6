@@ -50,7 +50,7 @@ function Home() {
     getUser();
   }, []);
 
-  const ButtonRemove = async (index) => {
+  const ButtonRemover = async (index) => {
     const Items = data.filter((item, i) => i !== index);
     setCategorias([...Items]);
   };
@@ -63,7 +63,7 @@ function Home() {
   };
   const handleDelete = (index) => {
     handleClose();
-    ButtonRemove(index);
+    ButtonRemover(index);
   };
 
   const data = [
@@ -208,7 +208,6 @@ function Home() {
   return (
     <div className="App">
       {/* INICIO MODAL */}
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Delete</Modal.Title>
@@ -241,7 +240,6 @@ function Home() {
       </Modal>
 
       {/* FINAL MODAL */}
-
       <Container fluid>
         <Row style={{ margin: 20 }}>
           {/* INICIO CATEGORIAS */}
@@ -342,7 +340,6 @@ function Home() {
           {/* INICIO RESUMO */}
           <Col xs={5} md={5}>
             {/* colar alert */}
-
             <Card className="cardStyleCol">
               <Card.Body>
                 <h3 className="h3">Resumo</h3>

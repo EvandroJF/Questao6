@@ -6,7 +6,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Navbar, Form, Button, InputGroup } from "react-bootstrap";
 
 import Home from "../pages/home";
-import "./../components/index.css";
 
 const drawerWidth = 250;
 
@@ -15,11 +14,10 @@ export default function ResponsiveDrawer(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-  // alterar o styles por index.css
   return (
     <Box
       className="Box"
-      sx={{ display: "flex", backgroundColor: "#eee", height: "100vh" }}
+      sx={{ display: "flex", backgroundColor: "#EEEEEE", height: "100vh" }}
     >
       <Box
         component="nav"
@@ -38,7 +36,7 @@ export default function ResponsiveDrawer(props) {
           open
         />
       </Box>
-
+      {/* INICIO NAVBAR */}
       <Box
         component="main"
         sx={{
@@ -77,7 +75,7 @@ export default function ResponsiveDrawer(props) {
             </InputGroup>
           </Form>
         </Navbar>
-
+        {/* FINAL NAVBAR */}
         <Home />
       </Box>
     </Box>
